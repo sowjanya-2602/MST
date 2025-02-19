@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h4>Your Ticket Details:</h4>
+    <br>
+    <div id="11"></div> <!-- Added an element to display the result -->
+
+    <script>
+        let i = 0;
+        let y = [3, 5, 7, 9, 11];  // Discount percentages for ticket bookings
+        let x = prompt("No of Tickets?");
+        x = Number(x);  // Convert input to number
+
+        if (x <= 2) {
+            document.getElementById("11").innerHTML = "Tickets booked <br>" + "Cost for " + x + " Tickets is " + (x * 150);
+        } else if (x >= 6) {
+            document.getElementById("11").innerHTML = "Booking is not allowed";
+        } else {
+            document.getElementById("11").innerHTML = "Tickets booked <br>" + "Cost for " + x + " Tickets is " + (x * 150 - (x * (y[x - 1] / 100) * 150));
+        }
+    </script>
+</body>
+</html>

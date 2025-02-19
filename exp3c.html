@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h4>Your Ticket Details:</h4>
+    <br>
+    <div id="ticketDetails"></div> <!-- Placeholder to display results -->
+
+    <script>
+        let x = Number(prompt("Enter No. of tickets : "));  // Get the number of tickets
+        let ticketPrice = 150;  // Price per ticket
+        let discount = 10;  // Festival season discount in percentage
+        let discountAmount = (ticketPrice * discount) / 100;  // Discount per ticket
+        let totalCost = ticketPrice * x;  // Total cost without discount
+        let totalCostAfterDiscount = totalCost - (discountAmount * x);  // Total cost after applying discount
+
+        // Display the results
+        let output = "";
+        output += "Total no. of seats booked: " + x + "<br>";
+        output += "Cost of " + x + " tickets: " + (ticketPrice * x).toFixed(2) + "<br>";
+        output += "Festival Season Discount: " + discount + "%<br>";
+        output += "Total cost after discount is: " + totalCostAfterDiscount.toFixed(2) + "<br>";
+
+        document.getElementById("ticketDetails").innerHTML = output;  // Output the details in the div
+    </script>
+</body>
+</html>

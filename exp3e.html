@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Details</title>
+</head>
+<body>
+    <script>
+        let x = prompt("No of Tickets?");
+        x = Number(x);
+        let i = 0;
+        let y = 5;  // Starting discount percentage
+        let total = 0;
+        document.write("<b>Your ticket Details:</b><br>");
+
+        for (i = 0; i < x; i++) {
+            let ticketPrice = 150 - (150 * (y / 100));  // Price after discount
+            document.write("Ticket for Customer " + (i + 1) + " gets " + y + "% discount! , cost is: " + ticketPrice.toFixed(2) + "<br>");
+            total += ticketPrice;  // Add the discounted ticket price to the total
+            y += 2;  // Increase the discount for the next ticket
+        }
+
+        document.write("For " + x + " tickets, you need to pay: " + total.toFixed(2) + " instead of " + (x * 150) + "<br>");
+    </script>
+</body>
+</html>
